@@ -5,6 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мой блог</title>
 </head>
+    # Создаём HTML-страницу с прогнозом
+html_content = """
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноз баллов студента</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .result {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .result h2 {
+            color: #2e7d32;
+            margin-top: 0;
+        }
+        .prediction {
+            font-size: 24px;
+            color: #1b5e20;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Прогноз успеваемости</h1>
+        
+        <div class="result">
+            <h2>Результат прогноза</h2>
+            <p>Студент занимался <strong>5 часов</strong></p>
+            <p class="prediction">Прогноз баллов: 50.23</p>
+        </div>
+        
+        <h3>Прогнозы для разных значений часов:</h3>
+        <table>
+            <tr>
+                <th>Часы подготовки</th>
+                <th>Прогноз баллов</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>12.32</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>31.28</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>50.23</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>69.19</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>97.62</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+"""
+
+# Сохраняем файл
+with open('index.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("✅ Файл index.html создан!")
 <body>
          <h2>12 января,2026</h2>
     Вопрос пользователя: Сколько ждать мой заказ?
